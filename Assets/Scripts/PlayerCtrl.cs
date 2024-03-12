@@ -42,6 +42,17 @@ public class PlayerCtrl : MonoBehaviour
                  isTriggered = false;
                 }
             }
+            else if (hit.collider.CompareTag("Button"))
+            {
+                GaugeTimer += 0.33f * Time.deltaTime;
+                if (GaugeTimer >= 1.0f || isTriggered)
+                {
+                    Debug.Log("hit");
+                    hit.transform.GetComponent<Button>().onClick.Invoke();
+                    GaugeTimer = 0.0f;
+                    isTriggered = false;
+                }
+            }
             else
             {
                 GaugeTimer = 0.0f;
