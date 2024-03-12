@@ -10,6 +10,8 @@ public class PlayerCtrl : MonoBehaviour
     private float GaugeTimer;
 
     private bool isTriggered = false;
+    public GameObject Sphere;
+    public Texture TextureImamge;
     
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,8 @@ public class PlayerCtrl : MonoBehaviour
                 GaugeTimer += 0.33f * Time.deltaTime;
                 if (GaugeTimer >= 1.0f || isTriggered)
                 {
-                 hit.transform.gameObject.SetActive(false);
+                 // hit.transform.gameObject.SetActive(false);
+                 Sphere.GetComponent<Renderer>().material.SetTexture("_MainTex", TextureImamge);
                  GaugeTimer = 0.0f;
                  isTriggered = false;
                 }
