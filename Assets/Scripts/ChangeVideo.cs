@@ -17,6 +17,7 @@ public class ChangeVideo : MonoBehaviour
         {
             gameObject.GetComponent<VideoPlayer>().clip = clip01;
             isclip01 = true;
+            isclip02 = false;
         }
     }
 
@@ -26,6 +27,7 @@ public class ChangeVideo : MonoBehaviour
         {
             gameObject.GetComponent<VideoPlayer>().clip = clip02;
             isclip02 = true;
+            isclip01 = false;
         }
     }
 }
