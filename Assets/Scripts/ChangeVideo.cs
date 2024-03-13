@@ -8,14 +8,15 @@ public class ChangeVideo : MonoBehaviour
 {
     public VideoClip clip01;
     public VideoClip clip02;
-    private bool isclip01;
-    private bool isclip02;
+    private bool isclip01 = false;
+    private bool isclip02 = false;
 
     private VideoPlayer videoPlayer;
 
     private void Start()
     {
         videoPlayer = gameObject.GetComponent<VideoPlayer>();
+        isclip01 = true;
     }
 
 
