@@ -52,11 +52,11 @@ public class ChangeVideo : MonoBehaviour
         {
             if (videoPlayer.isPlaying)
             {
-                gameObject.GetComponent<VideoPlayer>().Pause();
+                videoPlayer.Pause();
             }
             else
             {
-                gameObject.GetComponent<VideoPlayer>().Play();
+                videoPlayer.Play();
             }
         }
     }
